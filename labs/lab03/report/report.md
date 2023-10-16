@@ -1,94 +1,24 @@
----
-## Front matter
-title: "Шаблон отчёта по лабораторной работе"
-subtitle: "Простейший вариант"
-author: "Дмитрий Сергеевич Кулябов"
 
-## Generic otions
-lang: ru-RU
-toc-title: "Содержание"
-
-## Bibliography
-bibliography: bib/cite.bib
-csl: pandoc/csl/gost-r-7-0-5-2008-numeric.csl
-
-## Pdf output format
-toc: true # Table of contents
-toc-depth: 2
-lof: true # List of figures
-lot: true # List of tables
-fontsize: 12pt
-linestretch: 1.5
-papersize: a4
-documentclass: scrreprt
-## I18n polyglossia
-polyglossia-lang:
-  name: russian
-  options:
-	- spelling=modern
-	- babelshorthands=true
-polyglossia-otherlangs:
-  name: english
-## I18n babel
-babel-lang: russian
-babel-otherlangs: english
-## Fonts
-mainfont: PT Serif
-romanfont: PT Serif
-sansfont: PT Sans
-monofont: PT Mono
-mainfontoptions: Ligatures=TeX
-romanfontoptions: Ligatures=TeX
-sansfontoptions: Ligatures=TeX,Scale=MatchLowercase
-monofontoptions: Scale=MatchLowercase,Scale=0.9
-## Biblatex
-biblatex: true
-biblio-style: "gost-numeric"
-biblatexoptions:
-  - parentracker=true
-  - backend=biber
-  - hyperref=auto
-  - language=auto
-  - autolang=other*
-  - citestyle=gost-numeric
-## Pandoc-crossref LaTeX customization
-figureTitle: "Рис."
-tableTitle: "Таблица"
-listingTitle: "Листинг"
-lofTitle: "Список иллюстраций"
-lotTitle: "Список таблиц"
-lolTitle: "Листинги"
-## Misc options
-indent: true
-header-includes:
-  - \usepackage{indentfirst}
-  - \usepackage{float} # keep figures where there are in the text
-  - \floatplacement{figure}{H} # keep figures where there are in the text
----
-
+					РОССИЙСКИЙ УНИВЕРСИТЕТ ДРУЖБЫ НАРОДОВ
+				Факультет физико-математических и естественных наук
+					Кафедра прикладной информатики
+					Отчёт по лаборатной работе №3
+					дисциплина: Архитектура компьютера 
+					
+# Содержание
+1. Цель работы
+2. Теоретичесское введение
+3. Выполнение лабораторной работы
+4. Задания для самостоятельной работы
+5. Вывод
+			
 # Цель работы
 
-Здесь приводится формулировка цели лабораторной работы. Формулировки
-цели для каждой лабораторной работы приведены в методических
-указаниях.
-
-Цель данного шаблона --- максимально упростить подготовку отчётов по
-лабораторным работам.  Модифицируя данный шаблон, студенты смогут без
-труда подготовить отчёт по лабораторным работам, а также познакомиться
-с основными возможностями разметки Markdown.
-
-# Задание
-
-Здесь приводится описание задания в соответствии с рекомендациями
-методического пособия и выданным вариантом.
+Целью работы является освоение процедуры оформления отчетов с помощью легковесного языка разметки Markdown.
 
 # Теоретическое введение
 
-Здесь описываются теоретические аспекты, связанные с выполнением работы.
-
-Например, в табл. @tbl:std-dir приведено краткое описание стандартных каталогов Unix.
-
-: Описание некоторых каталогов файловой системы GNU Linux {#tbl:std-dir}
+: Описание некоторых каталогов файловой системы GNU Linux
 
 | Имя каталога | Описание каталога                                                                                                          |
 |--------------|----------------------------------------------------------------------------------------------------------------------------|
@@ -101,19 +31,28 @@ header-includes:
 | `/tmp`       | Временные файлы                                                                                                            |
 | `/usr`       | Вторичная иерархия для данных пользователя                                                                                 |
 
-Более подробно об Unix см. в [@gnu-doc:bash;@newham:2005:bash;@zarrelli:2017:bash;@robbins:2013:bash;@tannenbaum:arch-pc:ru;@tannenbaum:modern-os:ru].
-
 # Выполнение лабораторной работы
 
-Описываются проведённые действия, в качестве иллюстрации даётся ссылка на иллюстрацию (рис. @fig:001).
+1. Перейти в сформированный каталог курса лабораторной работы №2 и обновить локальный репозиторий.
+![1](image/1.png)
+С помощью команды cd переходим в каталог, с помощью git pull стягиваем изменения из удаленного репозитория.
+2. Перейти в каталог по лабораторной работе №3.
+![2](image/2.png)
+С помощью команды cd переходим в каталог report, далее с помощью make создаём файлы типа docx. и pdf.
+3. Проверить наличие созданных файлов
+![3](image/4.png)
+Проверяем наличие созданных файлов в указанном каталоге
+4. Удалить полученные файлы и открыть файл report.md
+![3](image/3.png)
+С помощью команды make clean удаляем оба файла, далее открываем текстовый редактор gedit.
+5. Редактируем шаблон, описываем лабораторную работу.
+![5](image/5.png)
+6. Загружаем файлы на Github.
+![6](image/6.png)
 
-![Название рисунка](image/placeimg_800_600_tech.jpg){#fig:001 width=70%}
 
 # Выводы
 
-Здесь кратко описываются итоги проделанной работы.
+	В ходе выполнения лабораторной работы №3 я освоил работу с легковесным языком разметки Markdown, а также закрепил знания по работе с Github  и ОС Linux.
 
-# Список литературы{.unnumbered}
 
-::: {#refs}
-:::
